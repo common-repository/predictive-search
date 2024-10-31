@@ -1,0 +1,36 @@
+{
+	"apiVersion": 2,
+	"name": "wpps-result/item-template",
+	"title": "Item Template",
+	"category": "wp-predictive-search-result-blocks",
+	"parent": [ "wpps-result/query" ],
+	"description": "Contains the block elements used to render a post, like the title, featured image, excerpt, and more.",
+	"textdomain": "wp-predictive-search",
+	"attributes":{
+		"blockID": {
+			"type": "string"
+		},
+		"rowGap": {
+			"type": "number",
+			"default": 20
+		},
+		"columnGap": {
+			"type": "number",
+			"default": 20
+		}
+	},
+	"usesContext": [ "perPage", "columns" ],
+	"supports": {
+		"reusable": false,
+		"html": false,
+		"align": false,
+		"layout": {
+			"allowEditing": false
+		},
+		"__experimentalLayout": {
+			"allowEditing": false
+		}
+	},
+	"editorStyle": [ "wp-block-post-template-editor", "predictive-search-block-editor" ],
+	"style": [ "wp-block-post-template", "predictive-search-block-frontend" ]
+}

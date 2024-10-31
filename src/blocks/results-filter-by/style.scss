@@ -1,0 +1,23 @@
+.wpps-result-filter-by-container{
+	display: block;
+
+	.ps_navigation_divider {
+		border-left: 1px solid #000;
+		margin: 0 10px;
+	}
+
+	.rs_result_other_item {
+		display: inline-block;
+	}
+
+	.wp-block-wpps-result-filter-by {
+		&:not([style*="text-decoration"]) {
+			text-decoration: none;
+
+			&:focus,
+			&:active {
+				text-decoration: none;
+			}
+		}
+	}
+}

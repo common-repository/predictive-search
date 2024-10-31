@@ -1,0 +1,36 @@
+.wp-block-wpps-result-item-template {
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+    list-style: none;
+    padding: 0;
+
+    // Unset background colors that can be inherited from Global Styles with extra specificity.
+    &.wp-block-wpps-result-item-template {
+        background: none;
+    }
+
+    * + * {
+        margin-block-start: 0 !important;
+    }
+
+    &.is-flex-container {
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25em !important;
+
+        li {
+            margin: 0;
+            width: 100%;
+        }
+
+        @media (min-width:600px) {
+            @for $i from 2 through 6 {
+                &.is-flex-container.columns-#{ $i } > .wp-block-post {
+                    width: calc((100% / #{ $i }) - 1.25em + (1.25em / #{ $i }));
+                }
+            }
+        }
+    }
+}
